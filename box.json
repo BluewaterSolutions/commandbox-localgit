@@ -1,21 +1,21 @@
 {
     "name":"localGit",
     "version":"1.0.0",
-    "author":"",
+    "author":"Andrew Davis",
     "location":"",
     "homepage":"",
     "documentation":"",
     "repository":{
-        "type":"",
-        "URL":""
+        "type":"git",
+        "URL":"https://github.com/BluewaterSolutions/commandbox-localgit"
     },
     "bugs":"",
-    "slug":"my-package",
-    "shortDescription":"A sweet package",
+    "slug":"commandbox-localgit",
+    "shortDescription":"Use Commandbox with local git",
     "description":"",
     "instructions":"",
     "changelog":"",
-    "type":"",
+    "type":"commandbox-modules",
     "keywords":[],
     "private":false,
     "projectURL":"",
