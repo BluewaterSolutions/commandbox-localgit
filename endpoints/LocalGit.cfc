@@ -64,9 +64,7 @@ component accessors="true" implements="commandbox.system.endpoints.IEndpoint" si
 		// Temporary location to place the repo
 		var localPath='#TempDir#/gitlocal_#randRange( 1, 1000 )#';
 		//consoleLogger.debug( 'localPath [#localPath#]' );
-directoryCreate(localPath);
-sleep(10000);
-
+		directoryCreate(localPath);
 
 		/*
 		cfexecute(
@@ -75,9 +73,9 @@ sleep(10000);
 			arguments = " clone -b #branch# #GitURL# '#localPath#'",
 			timeout = 100
    		 );
-			*/
+		*/
 
-		var gitRunner = wirebox.getinstance( name='CommandDSL', initArguments={ name : 'run git clone -b #branch# #GitURL# "#localPath#"' } ).run( echo=true );
+		var gitRunner = wirebox.getinstance( name='CommandDSL', initArguments={ name : 'run git clone --depth 1 -b #branch# #GitURL# "#localPath#"' } ).run( echo=true );
 
 		return folderEndpoint.resolvePackage(  '#localPath#', arguments.verbose );
 		
